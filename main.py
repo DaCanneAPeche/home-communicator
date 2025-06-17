@@ -47,5 +47,5 @@ if __name__ == "__main__":
     
     print(f"\n- http://127.0.0.1:{PORT}\n- http://{ip_adress}:{PORT}\n")
 
-    create_qrcode(ip_adress=ip_adress, show_qrcode=False)
-    socketio.run(app, host="0.0.0.0", port=PORT, debug=True)
+    create_qrcode(ip_adress=ip_adress, show_qrcode=True)
+    socketio.run(app, host="0.0.0.0", port=PORT, debug=False)
