@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+
+/* Catpuccin Moch color palette */
+:root {
+  --bg0: #11111b; /* Main bg */
+  --bg1: #1e1e2e; /* Header and blocks bg */
+  --bg2: #313244; /* Sidebar bg */
+  --fg: #cdd6f4;
+  --script-color: #fab387;
+  --page-color: #a6e3a1;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+  font-family: "Fira Sans", sans-serif;
+  color: var(--fg);
+}
+
+input[type=range][orient=vertical] {
+	appearance: slider-vertical;
+}
+
+html,
+body {
+	width: auto;
+	height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  position: relative;
+  background-color: var(--bg0);
+}
+
+header {
+	width: 100%;
+	height: 10vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--bg1);
+}
+
+header h1 {
+	text-transform: uppercase;
+	position: absolute;
+	right: 3%;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 4vw;
+}
+
+.refresh {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.burger-menu {
+	width: 10vh;
+	height: 10vh;
+	background-color: var(--bg2);
+	position: absolute;
+	border: none;
+	cursor: pointer;
+	left: 0;
+	transition: left 0.5s ease-in-out;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.burger-menu .lines-container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 70%;
+	height: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.burger-menu .lines-container span {
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	background-color: var(--fg);
+	border-radius: 15%;
+	transform: translateY(-50%);
+	left: 0;
+	transition: ease-in-out 0.3s;
+}
+
+.burger-menu .lines-container span:nth-child(1) {
+	top: 0;
+}
+
+.burger-menu .lines-container span:nth-child(2) {
+	top: 50%;
+}
+
+.burger-menu .lines-container span:nth-child(3) {
+	top: 100%;
+}
+
+@media (hover: hover){
+
+	.burger-menu:hover .lines-container span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.burger-menu:hover .lines-container span:nth-child(1) {
+		top: 30%;
+	}
+
+	.burger-menu:hover .lines-container span:nth-child(3) {
+		top: 70%;
+	}
+}
+
+.burger-menu.active .lines-container span:nth-child(2) {
+	opacity: 0;
+}
+
+.burger-menu.active .lines-container span:nth-child(1) {
+	transform: rotate(-45deg);
+	top: 50%;
+	transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.1s;
+}
+
+.burger-menu.active .lines-container span:nth-child(3) {
+	transform: rotate(45deg);
+	top: 50%;
+	transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.1s;
+}
+
+.burger-menu.active {
+	left: 30vh;
+}
+
+.sidebar {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 100%;
+	width: 30vh;
+	background-color: var(--bg2);
+	position: absolute;
+	top: 0;
+	left: -30vh;
+	transition: left 0.5s ease-in-out;
+	font-weight: bold;
+	z-index: 1;
+}
+
+.burger-menu.active ~ .sidebar {
+	left: 0;
+}
+
+/* 			SIDEBAR       */
+
+.sidebar span::after {
+	content: "";
+	display: block;
+	width: 80%;
+	height: 0.1em;
+	background-color: var(--fg);
+  margin-top: 1%;
+}
+
+.sidebar span {
+	display: block;
+	margin: 5% 0 0 2%;
+}
+
+.sidebar li {
+	margin: 5%;
+	padding: 6%;
+	position: relative;
+	background-color: var(--bg1);
+  border-radius: 5px;
+}
+
+.sidebar .execute {
+	border-radius: 0;
+	border: 0;
+	cursor: pointer;
+	background-color: inherit;
+
+  height: 100%;
+  width: 75%;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  align-content: center;
+  font-size: inherit;
+}
+
+.sidebar div.execute:active {
+	background-color: aliceblue;
+}
+
+.sidebar li .favorite-button {
+	width: 8%;
+	/* height: auto; */
+  aspect-ratio: 1 / 1;
+
+	border-radius: 0;
+	background: url("../img/star-of-favorites-outline.png");
+	background-size: cover;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 5%;
+}
+
+.sidebar li .favorite-button.active {
+	background-image: url("../img/star.png");
+}
+

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<script src={{ url_for('static', filename="/js/home.js") }} charset="utf-8" type="module" defer></script>
+<link rel="stylesheet" href={{ url_for('static', filename="/css/home.css") }}
+type="text/css" media="screen" charset="utf-8">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="favorites-wrapper">
+	<div class="favorites-row"></div>
+	<div class="favorites-row"></div>
+	<div class="favorites-row"></div>
+</div>
+
+{% endblock %}
+

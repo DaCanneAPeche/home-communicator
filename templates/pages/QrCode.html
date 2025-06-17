@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<script src={ url_for('static', filename="/js/pages/QrCode.js") } charset="utf-8" type="module" defer></script>
+<link rel="stylesheet" href={{ url_for('static', filename="/css/pages/QrCode.css") }}
+type="text/css" media="screen" charset="utf-8">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="wrapper">
+  <img src={{ url_for('static', filename="/img/qrcode.jpg") }}>
+</div>
+
+{% endblock %}

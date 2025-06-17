@@ -1,0 +1,10 @@
+[favorites]
+favorites_lenght = 6
+[[favorites.favorites]]
+name = "RefreshCenterComputer"
+is_a_page = false
+
+[[favorites.favorites]]
+name = "JoystickController"
+is_a_page = true
+

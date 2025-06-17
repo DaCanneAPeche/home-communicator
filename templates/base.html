@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href={{ url_for('static', filename="/css/base.css") }}
+		type="text/css" media="screen" charset="utf-8">
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+		<script type="text/javascript">const socket = io();</script>
+		<script src={{ url_for('static', filename="/js/main.js") }} charset="utf-8" type="module" defer></script>
+
+		<title>Home communicator - Page name</title>
+
+		{% block head %} {% endblock %}
+
+	</head>
+	<body>
+		
+		<header>
+			<a href="/"><h1>home communicator</h1></a>
+		</header>
+
+		<button class="burger-menu">
+			<div class="lines-container">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</button>
+
+		<div class="sidebar">
+			
+			<div class="scripts-list">
+				<span class="title">Scripts</span>
+				{% for script in scripts %}
+				<li> <div class="execute">
+						{{ script }}
+				</div>
+
+				<button class="favorite-button">
+				</button>
+
+				</li>
+				{% endfor %}
+			
+			</div>
+
+			<div class="pages-list">
+				<span class="title">Pages</span>
+				{% for page in pages %}
+				<li> <a class="execute">
+						{{ page }}
+				</a> 	
+				
+				<button class="favorite-button">
+				</button>
+
+				</li>
+				{% endfor %}
+			
+			</div>
+		</div>
+
+		{% block content %} {% endblock %}
+
+	</body>
+</html>

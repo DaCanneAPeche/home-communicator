@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<script src={{ url_for('static', filename="/js/pages/JoystickController.js") }} charset="utf-8" type="module" defer></script>
+<link rel="stylesheet" href={{ url_for('static', filename="/css/pages/JoystickController.css") }} 
+type="text/css" media="screen" charset="utf-8">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="content-wrapper">
+	
+	<div class="mouse-movement">	
+		<div class="joystick-wrapper">
+			<div class="joystick"></div>
+		</div>
+			<div class="scroll-bar">
+				<input type="range" min="-1" max="1" value="0" orient="vertical" step="0.01"/>
+			</div>
+</div>
+
+	<div class="inputs-wrapper">
+		<div class="virtual-mouse">
+			<button class="left">left</button>
+			<button class="right">right</button>
+		</div>
+		<div class="virtual-keyboard">
+			<input type="text" placeholder="Text to write..."/>
+			<button class="send" type="submit">-></button>
+			<button class="backspace" type="submit"><<</button>
+			<button class="enter" type="submit">\n</button>
+		</div>
+	</div>
+
+
+</div>
+
+{% endblock %}

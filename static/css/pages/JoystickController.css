@@ -1,0 +1,68 @@
+.content-wrapper {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.mouse-movement {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.scroll-bar {
+	height: 100%;
+}
+
+.scroll-bar input {
+	height: 100%;
+}
+
+.joystick-wrapper {
+	width: 40vh;
+	height: 40vh;
+	border: solid black 10px;
+	border-radius: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.joystick {
+	width: 40%;
+	height: 40%;
+	background-color: blue;
+	border-radius: 100%;
+	
+	pointer-events: none;
+}
+
+.joystick.unactive {
+	transition: ease-in-out transform 0.2s;
+}
+
+.inputs-wrapper {
+	margin-top: 5%;
+	background-color: linen;
+	width: 60%;
+	height: 20%;
+}
+
+.virtual-mouse, .virtual-keyboard {
+	height: 50%;
+	width: 100%;
+	display: grid;
+}
+
+.virtual-mouse {
+	grid-template-columns: 1fr 1fr;
+}
+
+.virtual-keyboard {
+	grid-template-columns: 5fr 1fr 1fr 1fr;
+}
+
