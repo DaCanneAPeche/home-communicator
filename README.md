@@ -1,23 +1,25 @@
 # Home communicator
 
 A program that makes it able to make actions on a center computer by distance
-from any devices connected on the same Wi-Fi. Make it able to use your phone
+from any devices connected on the same Wi-Fi. Makes it able to use your phone
 as a remote controller for exemple.
 
 ## Warning
 The program is made to be used in a local environment, never open the port where
-the program is running (see in `main.py`)
+the program is running (see in `main.py`).
 
 ## How it works
 It creates a local web server that can be accessed from any local devices and
 then use websockets to communicate.
 
 ## Install deps
-> pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 ## Create scripts 
-Run `create_script/create_script.py` and answer the question. A page is a script
-with an HTML page instead of a single websocket.
+Run `create_script/create_script.py` and answer the questions. A page is a script
+with an HTML page instead of a single websocket request.
 
 ### Scripts
 ```python
@@ -54,9 +56,9 @@ edit html :
 adit css : `static/css/<page name>.css`
 
 ## Favorites
-open the side menu and click on the star, the script / page will now appear
+Open the side menu and click on the star, the script / page will now appear
 directly on the screen
 
 ## Screenshot
 You can change the colors in `static/css/base.css`. By default, uses the 
-[Catppuccin](https://catppuccin.com/) color palette.
+[catppuccin](https://catppuccin.com/) color palette.
