@@ -42,9 +42,9 @@ self.add_socket_event("socket name", function) # register a socket event
 socket.emit("socket name");
 ```
 
-edit html : 
+edit html (uses [flask template system](https://flask.palletsprojects.com/en/stable/tutorial/templates/) : 
 ```html
-
+<!-- templates/pages/<page name>.html -->
 {% block head %}
     <!-- page head -->
 {% head %}
@@ -53,14 +53,14 @@ edit html :
     <!-- page content -->
 {% endblock %}
 ```
-adit css : `static/css/<page name>.css`
+edit css : `static/css/<page name>.css`
 
 ## Favorites
 Open the side menu and click on the star, the script / page will now appear
 directly on the screen
 
 ## Screenshot
-You can change the colors in `static/css/base.css`. By default, uses the 
+You can change the colors in `static/css/base.css`. By default, it uses the 
 [catppuccin](https://catppuccin.com/) color palette.
 
 ![Project screenshot](https://private-user-images.githubusercontent.com/79769796/456076027-21da20ad-f987-4f01-b688-95ff98c14f42.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTAxNzQzOTgsIm5iZiI6MTc1MDE3NDA5OCwicGF0aCI6Ii83OTc2OTc5Ni80NTYwNzYwMjctMjFkYTIwYWQtZjk4Ny00ZjAxLWI2ODgtOTVmZjk4YzE0ZjQyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MTclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjE3VDE1MjgxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFiODQ1ZTBhMGJhM2JlMzEyYzQ2NTg5Njc3MDgzMjA1ZDc2MmNmZTZmNjQ5YTNkODc1MGMzZTkzZTNhY2M5ODYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7VL8Yn4lTYK_VwSnL8Pftnx3wuo-zSpvj9DHvWGZl44)
